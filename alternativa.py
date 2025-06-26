@@ -1,26 +1,28 @@
+
+
 class Alternativa:
-    def __init__(self, contenido: str, ayuda: str = None) -> None:
+    def __init__(self, contenido: str, ayuda: str = None):
         self.__contenido = contenido
-        self.__ayuda = ayuda
+        self.__ayuda = ayuda  #opcional
 
     @property
-    def contenido(self) -> str:
+    def contenido(self) -> str:   #lee contenido
         return self.__contenido
 
     @contenido.setter
-    def contenido(self, new_contenido: str) -> None:
+    def contenido(self, new_contenido: str):  #modifica contenido
         self.__contenido = new_contenido
 
     @property
-    def ayuda(self) -> str:
+    def ayuda(self) -> str:     #lee ayuda
         return self.__ayuda
 
     @ayuda.setter
-    def ayuda(self, new_ayuda: str) -> None:
+    def ayuda(self, new_ayuda: str):   #modifica ayuda
         self.__ayuda = new_ayuda
 
-    def mostrar_alternativa(self) -> None:
+    def mostrar_alternativa(self):    #muestra contenido y/o ayuda
         if self.__ayuda:
-            print(f"  - Contenido: {self.__contenido} (Ayuda: {self.__ayuda})")
+            print(f"---contenido: {self.__contenido} (Ayuda: {self.__ayuda})")
         else:
-            print(f"  - Contenido: {self.__contenido}")
+            print(f"---contenido: {self.__contenido}")
