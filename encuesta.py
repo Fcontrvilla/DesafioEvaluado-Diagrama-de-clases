@@ -1,7 +1,6 @@
 
 
 from pregunta import Pregunta
-# Se asume que ListadoRespuestas y Usuario serán importados cuando se necesiten para evitar dependencias circulares
 
 class Encuesta:
     def __init__(self, nombre: str, preguntas_data):
