@@ -1,3 +1,5 @@
+
+
 from alternativa import Alternativa
 
 class Pregunta:
@@ -5,7 +7,8 @@ class Pregunta:
         self.__enunciado = enunciado
         self.__ayuda = ayuda
         self.__requerida = requerida
-        self.__alternativas = [Alternativa(a['contenido'], a.get('ayuda')) for a in alternativas_data]   # contiene al menos contenido y opcionalmente ayuda
+        self.__alternativas = [Alternativa(a['contenido'], a.get('ayuda')) for a in alternativas_data]   # Iteramos sobre los datos de las alternativas
+        # y creamos objetos 'Alternativa' reales, guardándolos en una lista.contiene al menos contenido y opcionalmente ayuda
 
     @property
     def enunciado(self):    #  leer  enunciado de la pregunta
@@ -34,7 +37,9 @@ class Pregunta:
     @property
     def alternativas(self):
         return self.__alternativas
+    #no hay setter. las alternativas de una pregunta no se modifican despues de crearse
 
+    
     def mostrar_pregunta(self):
         print(f"Pregunta: {self.__enunciado}")   #enunciado
         

@@ -21,7 +21,7 @@ class Alternativa:
     def ayuda(self, new_ayuda: str):   #modifica ayuda
         self.__ayuda = new_ayuda
 
-    def mostrar_alternativa(self):    #muestra contenido y/o ayuda
+    def mostrar_alternativa(self):    #muestra contenido y ayuda si hay
         if self.__ayuda:
             print(f"---contenido: {self.__contenido} (Ayuda: {self.__ayuda})")
         else:
