@@ -1,14 +1,13 @@
 
 
 class ListadoRespuestas:
-    def __init__(self, usuario, respuestas) -> None:
+    def __init__(self, usuario, respuestas):
         
         self.__usuario = usuario
         self.__respuestas = respuestas
 
     @property
     def usuario(self):
-        
         return self.__usuario
 
     @property
