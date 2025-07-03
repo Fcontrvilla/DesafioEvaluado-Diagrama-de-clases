@@ -11,7 +11,7 @@ class Encuesta:
         self.__listados_respuestas = []
 
     @property
-    def nombre(self):   # de la encuesta
+    def nombre(self):   # lee la encuesta
         return self.__nombre
 
     @nombre.setter
